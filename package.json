@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/devempreendedor"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
@@ -33,10 +33,12 @@
     "git-commit-msg-linter": "^4.0.7",
     "husky": "^7.0.0",
     "lint-staged": "^12.3.3",
+    "postcss": "^8.4.6",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
     "rollup": "^2.67.0",
     "rollup-plugin-dts": "^4.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "typescript": "^4.5.5"
   }
 }
