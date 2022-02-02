@@ -39,7 +39,7 @@ module.exports = (plop) => {
         path: '../src/components/index.ts',
         pattern: /(\/\/appendHere)/g,
         template:
-          "export { default as {{camelCase name}} } from './{{pascalCase name}}'",
+          "export { default as {{pascalCase name}} } from './{{pascalCase name}}'",
       },
     ],
   })
