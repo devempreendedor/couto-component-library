@@ -1,1 +1,1 @@
-const foo = "bar"
+export * from './components'
