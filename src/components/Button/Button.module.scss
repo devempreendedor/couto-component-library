@@ -2,4 +2,25 @@
   border: none;
   background: #f2f2f2;
   color: #777;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.primary {
+  background: #22c55e;
+  color: #fff;
+}
+
+.sm {
+  padding: 4px 8px;
+}
+
+
+.lg {
+  padding: 12px 22px;
 }

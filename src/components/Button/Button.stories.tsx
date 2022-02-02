@@ -20,4 +20,17 @@ Default.args = {
 export const Primary = Template.bind({})
 Primary.args = {
   children: 'Primary Button',
+  variant: 'primary',
+}
+
+export const Small = Template.bind({})
+Small.args = {
+  children: 'Small Button',
+  size: 'sm',
+}
+
+export const Large = Template.bind({})
+Large.args = {
+  children: 'Large Button',
+  size: 'lg',
 }
