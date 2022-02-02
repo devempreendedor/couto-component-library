@@ -1,15 +1,24 @@
 {
   "name": "jazida-ui",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
+    "build": "rollup -c",
     "lint": "eslint src --ignore-path .gitignore",
     "lint:fix": "yarn lint --fix",
     "format": "prettier src --write",
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-typescript": "^8.3.0",
     "@types/react": "^17.0.38",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
@@ -23,6 +32,8 @@
     "lint-staged": "^12.3.3",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
+    "rollup": "^2.67.0",
+    "rollup-plugin-dts": "^4.1.0",
     "typescript": "^4.5.5"
   }
 }
