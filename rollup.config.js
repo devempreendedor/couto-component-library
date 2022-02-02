@@ -5,6 +5,7 @@ import dts from 'rollup-plugin-dts'
 import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
+import { babel } from '@rollup/plugin-babel'
 
 const packageJson = require('./package.json')
 
@@ -18,9 +19,10 @@ export default [
         sourcemap: true,
       },
       {
-        file: packageJson.module,
         format: 'esm',
         sourcemap: true,
+        dir: 'dist',
+        preserveModules: true,
       },
     ],
     plugins: [
@@ -30,6 +32,11 @@ export default [
       typescript({ tsconfig: './tsconfig.json' }),
       postcss(),
       terser(),
+      babel({
+        babelHelpers: 'runtime',
+        exclude: /node_modules/,
+        extensions: ['.js', '.ts', '.tsx'],
+      }),
     ],
   },
   {

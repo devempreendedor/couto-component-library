@@ -1,7 +1,13 @@
 module.exports = {
   presets: [
-    '@babel/preset-env',
-    '@babel/preset-react',
-    '@babel/preset-typescript',
+    ['@babel/env', { modules: false }],
+    '@babel/typescript',
+    [
+      '@babel/preset-react',
+      {
+        runtime: 'automatic',
+      },
+    ],
   ],
+  plugins: [['@babel/plugin-transform-runtime', { useESModules: true }]],
 }
