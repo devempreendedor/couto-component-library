@@ -16,7 +16,9 @@
     "lint": "eslint src --ignore-path .gitignore",
     "lint:fix": "yarn lint --fix",
     "format": "prettier src --write",
-    "test": "jest",
+    "test": "jest --maxWorkers=50%",
+    "test:watch": "jest --watch --maxWorkers=25%",
+    "test:ci": "jest --runInBand",
     "test:coverage": "yarn test -- --coverage --watchAll=false",
     "prepare": "husky install"
   },
